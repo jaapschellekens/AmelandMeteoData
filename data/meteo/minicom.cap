@@ -1,0 +1,69 @@
+atdt0,0519542200
+CONNECT 2400
+
+kuifje!login: ê
+Password: 
+Login incorrect
+
+kuifje login: logger
+Password: 
+Linux 2.0.29.
+Last login: Sat Feb  5 12:46:05 on ttyS1.
+No mail.
+logging tial...
+reads seems to be running..Sat Feb 26 12:30:08 MET 2000
+reads seems to be running..Sat Feb 26 13:30:08 MET 2000
+reads seems to be running..Sat Feb 26 14:30:08 MET 2000
+reads seems to be running..Sat Feb 26 15:30:07 MET 2000
+reads seems to be running..Sat Feb 26 16:30:08 MET 2000
+---------------------------------------------------
+ To save data to file and transport over modem use
+ the ~/bin/savedat.csh script.
+
+ To dump last day from logger to dump.23x file use
+ the ~/bin/dump.csh script.
+
+ To dump last two weeks from logger to dump.23x file use
+ the ~/bin/dumpall.csh script (takes 33 min to complete).
+kuifje:~> ~/bin/svaavedat.csh 
+Resaving last day (id = 99)
+Sending SIGHUP to reads...
+Moved log file.
+Saved back last day.
+Now compressing file...
+done.
+use \'sz /home/logger/Sat Feb 26 17:23:20 MET 2000.gz\' to send file over modem.
+kuifje:~> sz Sat\ Feb\ 26\ 17:23:20\ MET\ 2000.gz 
+rz**B00kuifje:~> 
+kuifje:~> 
+kuifje:~> df
+Filesystem         1024-blocks  Used Available Capacity Mounted on
+/dev/hda2              71885   40573    27600     60%   /
+kuifje:~> ls -l
+total 3067
+-rw-r--r--   1 logger   bin           414 Feb 26 17:41 23.log
+-rw-r--r--   1 logger   bin        430679 Aug 20  1999 Fri\ Aug\ 20\ 16:23:28\ MET\ DST\ 1999.gz
+-rw-r--r--   1 logger   bin         53953 Dec 10 19:08 Fri\ Dec\ 10\ 19:08:15\ MET\ 1999.gz
+-rw-r--r--   1 logger   bin         94825 Nov 12 19:50 Fri\ Nov\ 12\ 19:50:09\ MET\ 1999.gz
+-rw-r--r--   1 logger   bin         68116 Nov 19 16:07 Fri\ Nov\ 19\ 16:07:35\ MET\ 1999.gz
+-rw-r--r--   1 logger   bin        168961 May 24  1999 Mon\ May\ 24\ 11:25:03\ MET\ DST\ 1999.gz
+-rw-r--r--   1 logger   bin        133744 Dec  4 10:48 Sat\ Dec\ 4\ 10:47:54\ MET\ 1999.gz
+-rw-r--r--   1 logger   bin         12636 Dec  4 20:38 Sat\ Dec\ 4\ 20:38:00\ MET\ 1999.gz
+-rw-r--r--   1 logger   bin        212216 Feb 26 17:23 Sat\ Feb\ 26\ 17:23:20\ MET\ 2000.gz
+-rw-r--r--   1 logger   bin        124857 Feb  5 12:46 Sat\ Feb\ 5\ 12:46:21\ MET\ 2000.gz
+-rw-r--r--   1 logger   bin        400005 Jan 22 19:12 Sat\ Jan\ 22\ 19:12:52\ MET\ 2000.gz
+-rw-r--r--   1 logger   bin         41769 May  6  1999 Thu\ May\ 6\ 21:38:13\ MET\ DST\ 1999.gz
+-rw-r--r--   1 logger   bin        325332 Sep 23 11:57 Thu\ Sep\ 23\ 11:56:57\ MET\ DST\ 1999.gz
+-rw-r--r--   1 logger   bin        429288 Jul  6  1999 Tue\ Jul\ 6\ 18:01:54\ MET\ DST\ 1999.gz
+-rw-r--r--   1 logger   bin        393872 Nov  3 10:03 Wed\ Nov\ 3\ 10:02:53\ MET\ 1999.gz
+drwxr-xr-x   2 logger   bin          1024 Sep 23 12:07 bin/
+-rw-r--r--   1 logger   bin           290 Feb 26 02:15 dag.res
+-rw-r--r--   1 logger   bin        212216 Feb 26 17:25 downl.gz
+drwxr-xr-x   2 logger   bin          1024 Mar 11  1999 logprog/
+drwxr-xr-x   2 logger   bin          1024 Mar 18  1999 src/
+kuifje:~> uptime
+  5:45pm  up 267 days, 11:05,  1 user,  load average: 0.12, 0.10, 0.13
+kuifje:~> exit
+logout
+!=¸‰D
+NO CARRIER

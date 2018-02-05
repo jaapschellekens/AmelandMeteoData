@@ -1,0 +1,19 @@
+Het M. Groen, J, Schellekens meesterwerk
+========================================
+
+CORREGEREN VAN TIJD< MOET OP KWARTIER BEGINNEN!!!
+
+Nu bezig met press_correct.m
+Moet doen
+Done - corectie ingr voor veldnivo
+Done - correctie 21x data voor veldnivo
+- tdr data bekijken
+- selecteren van 4 periodes
+- selecteren van 4 zonnige dagen en 4 bewolkte dagen
+- een record met meteo data maken (gebruik makking verdamping, daarna
+  penman-montieth)
+  = gebruik het metfive file, dan converteren naar 15 min data (metcor.m)
+  = dan periodes selecteren die gelijk zijn aan drukopnamer
+- trend-analyse (grondwaterstroming uitfilteren)
+- uitfilteren getijde bewegingen
+

@@ -1,0 +1,81 @@
+#!/home/hkl/hydro/promo/schj/bin/dcon
+#
+# dcon script to call out to Ameland meteo station and _only_ download the
+# data.
+#
+# J. Schellekens 1999
+
+
+#set echo on
+#set verbose on
+set comecho on
+
+# Initialize some variables
+let $c="/dev/ttyS1"                  	# Communication device
+let $d="ATDT0,0519542200^m"		# dail sequence
+let $s="2400n81"			# speed
+
+# First check if the model is ready
+open com $c
+set com $s
+sleep 5
+set senddelay 0.05
+send "AT^m"
+send "AT^m"
+waitfor  10 "OK" if % != 0 goto nomodem
+print "\nModem found. It is ready.\n"
+
+# Now dail the first time, then put on hook and wait 30sec
+send "atm1^m"
+waitfor  10 "OK" if % != 0 goto error
+send $d
+sleep 15
+send "ATH^m"
+waitfor  10 "NO CARRIER" if % != 0 goto error
+sleep 20
+
+# Now dail second time, this time the computer should answer!
+send $d
+waitfor 75 ":"  if % != 0 goto error
+
+send "^m"        
+send "^m"        
+waitfor 20 "ogin:"  if % != 0 goto error
+send "logger^m"        
+waitfor 10 "word:"  if % != 0 goto error 
+send "logger^m"
+waitfor 15 ">" if % != 0 goto noprompt
+
+# Check to uptime etc of the logger....
+send "uptime^m"
+waitfor 20 ">" if % != 0 goto noprompt
+send "date^m"
+waitfor 20 ">" if % != 0 goto noprompt
+print "The local time is ",$time(),"\n"
+
+send "sz downl.gz^m"
+print "Starting rz...\n\n"
+exec "/usr/bin/rz -E -vv -b  < /dev/ttyS1"
+
+goto end
+
+#-----------------------------------------------------------------
+:error
+print "Some error occured!\n"
+goto end
+
+:nomodem
+print "A modem was not found, please check cables.\n"
+goto end
+
+
+:dnltimeout
+print "Timeout during download! (more than 3600secs)\n"
+goto end
+
+
+:noprompt 
+print "Dit not recieve a prompt!\n"
+goto end
+
+:end

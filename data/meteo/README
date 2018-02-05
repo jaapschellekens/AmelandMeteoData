@@ -1,0 +1,53 @@
+Procedure for Ameland meteo data files
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1. Getting the files 
+
+(BTW this should all be done on the flow workstation)
+
+a) Dail the station....... Running the get_aml_data.csh
+script should do the trick (I hope). Otherwise use minicom
+to do so manually.
+- Number of station: 0,0519542200
+- Mobile of Peter Metz: 0,0622062397
+Ater this you should have a (compresses) file with a very long
+name (present date and time); these are the data!
+
+b) Place the file in the raw/ directory. The name of
+this file should follow from the previous name (ie
+if the last file was called ame1009.dat the new file
+should be called ame1010.dat).
+
+
+2. Processing the files
+
+a) Use ame_dofile.m to convert a dowloaded file
+to Octave/matlab format with correct data and time.
+Afterwards add correction factors etc for the new
+file to the ame_mkall[year] file!
+
+b) Use ame_rep.m to generate a report of the newly added
+data file. The report is made in .tex, .dvi and .ps format.
+Check this report for data errors etc.
+
+c) Use ame_mkall[year].m to generated the yearly files, this
+script also performs some date checking and adjusting. You should
+run this before make monthly reports etc.
+
+d) Monthly reports can be generated from the year files using 
+ame_mont.m (or the 8-8.m file for 12 hr means for WaterSchap 
+Friesland)
+
+
+
+Instruments and available periods
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Batt. Voltage:
+Logger T:
+
+
+
+
+------------------------
+J. Schellekens June 1999

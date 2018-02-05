@@ -1,0 +1,57 @@
+Niets
+ATA
+OK
+Modem found. It is ready.
+
+atm1
+OK
+ATDT0,0519542200
+NO CARRIER
+ATDT0,0519542200
+CONNECT 2400
+
+kuifje!login:
+
+Password: Login incorrect
+
+kuifje login: logger
+Password: 
+Linux 2.0.29.
+Last login: Fri Dec 10 19:25:16 on ttyS1.
+No mail.
+logging tial...
+reads seems to be running..Sat Jan 22 14:30:08 MET 2000
+reads seems to be running..Sat Jan 22 15:30:08 MET 2000
+reads seems to be running..Sat Jan 22 16:30:08 MET 2000
+reads seems to be running..Sat Jan 22 17:30:08 MET 2000
+reads seems to be running..Sat Jan 22 18:30:08 MET 2000
+---------------------------------------------------
+ To save data to file and transport over modem use
+ the ~/bin/savedat.csh script.
+
+ To dump last day from logger to dump.23x file use
+ the ~/bin/dump.csh script.
+
+ To dump last two weeks from logger to dump.23x file use
+ the ~/bin/dumpall.csh script (takes 33 min to complete).
+kuifje:~> uptime
+  7:12pm  up 232 days, 12:33,  1 user,  load average: 0.15, 0.13, 0.09
+kuifje:~> date
+Sat Jan 22 19:12:49 MET 2000
+kuifje:~>The local time is Sat Jan 22 20:13:01 2000
+Now running the savedat script....
+ ~/bin/savedat.csh
+Resaving last day (id = 99)
+Sending SIGHUP to reads...
+Moved log file.
+Saved back last day.
+Now compressing file...
+done.
+use \'sz /home/logger/Sat Jan 22 19:12:52 MET 2000.gz\' to send file over modem.
+kuifje:~>savedat script is done.
+Starting rz...
+
+
+rz waiting to receive.**B0100000063f694Š**B0100000063f694ŠRetry 0: Got TIMEOUT
+**B0100000063f694ŠRetry 0: Got TIMEOUT
+**B0100000063f694Š

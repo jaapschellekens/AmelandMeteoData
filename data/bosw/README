@@ -1,0 +1,40 @@
+
+Bin-files
+--------
+- mk_all (re)make all bin files
+- press_correct.m correst the pressure data
+- tb_correct corrects the precip data
+- ws.m load the workspace:
+  abs b5b ingr      <- semi raw files
+  c_abs c_b5b c_ing <-- corrected files
+
+
+Betekenis files
+~~~~~~~~~~~~~~~
+bosw21x-1.dat: 	21x data met bodemvocht, luchtdruk, ingraaf
+p-?txt:		neerslag op boswachterij veldje
+b5b-?.txt:  	nivo in buis b5b
+ingra-?.txt: 	relative drukopnemer ingegraven op zelfde plek
+
+
+Beschikbare data:
+
+21x (bodemvocht, luchtdruk, ingraaf)
+	24-Sep-1999 12:15:00 -- 24-Sep-2000 14:45:00
+
+
+b5b	
+	09-May-1998 18:00:00 -- 02-Mar-1999 15:23:00
+	02-Mar-1999 16:00:00 -- 05-May-1999 17:30:00
+
+
+ingr
+	08-May-1999 16:00:00 -- 02-Jun-1999 17:46:00
+	24-Sep-1999 10:15:00 -- 03-Nov-1999 12:47:00
+
+Kolom indeling data:
+c_abs	date/time raw-soilm soilm% airpress absolute-ingr correct-waterlevel
+c_b5b   date/time waterlevel
+c_ingr  date/time waterlevel
+meteo   date/time rain rh1 rh2 t1 t2 7 8 9 10 11 12 13 14
+
